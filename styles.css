@@ -1,0 +1,409 @@
+/* Paleta de Colores y Tipografía Mejorada */
+:root {
+    --primary-color: #2ECC71; /* Verde esmeralda vibrante */
+    --secondary-color: #34495E; /* Azul oscuro elegante */
+    --accent-color: #FFC300; /* Amarillo brillante para destacar */
+    --background-light: #ECF0F1; /* Gris claro suave */
+    --background-dark: #2C3E50; /* Azul oscuro para secciones */
+    --text-dark: #2C3E50;
+    --text-light: #ECF0F1;
+    --white: #fff;
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    --spacing-unit: 20px;
+}
+
+/* Reset Básico y Tipografía Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    scroll-behavior: smooth; /* Desplazamiento suave para anclas */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    margin-bottom: 0.5em;
+}
+
+/* --- Encabezado y Navegación --- */
+.navbar {
+    background: var(--background-dark);
+    color: var(--text-light);
+    padding: 15px var(--spacing-unit);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Fija la barra de navegación al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0 18px;
+    transition: color 0.3s ease-in-out;
+    font-weight: 400;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Botones Genéricos y sus Estilos --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 8px;
+    border: none;
+    border-radius: 30px; /* Bordes más redondeados */
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.primary-btn:hover {
+    background-color: #27AE60; /* Verde un poco más oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.secondary-btn {
+    background: var(--accent-color);
+    color: var(--text-dark);
+}
+
+.secondary-btn:hover {
+    background-color: #F39C12; /* Amarillo un poco más oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Sección Hero (Más grande y con imagen a un lado) --- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px var(--spacing-unit);
+    background: linear-gradient(135deg, var(--background-light) 0%, var(--white) 100%);
+    min-height: 70vh; /* Altura mínima para que se vea bien */
+    text-align: left;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    margin-right: var(--spacing-unit);
+}
+
+.hero-content h2 {
+    font-size: 3.2em;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px; /* Tamaño máximo para la imagen del hero */
+}
+
+.responsive-hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Separador horizontal --- */
+hr {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 60px auto;
+    width: 80%;
+}
+
+/* --- Sección de Producto (Diseño de tarjeta central) --- */
+.product-section {
+    padding: 80px var(--spacing-unit);
+    background-color: var(--white);
+    text-align: center;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-unit) * 1.5;
+}
+
+.product-image-container {
+    flex: 1;
+    text-align: center;
+    max-width: 50%; /* Controla el ancho de la imagen dentro de la tarjeta */
+    padding-right: var(--spacing-unit);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    flex: 1;
+    text-align: left;
+    padding-left: var(--spacing-unit);
+}
+
+.product-info h2 {
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.product-features li {
+    font-family: var(--font-body);
+    font-size: 1em;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    text-indent: -1.5em; /* Ajuste para el icono */
+    padding-left: 1.5em; /* Ajuste para el icono */
+}
+
+.product-features li i {
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.price-and-action {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.price {
+    font-family: var(--font-heading);
+    font-size: 3.5em;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-right: var(--spacing-unit);
+    letter-spacing: -1px;
+}
+
+
+/* --- Sección de Componentes --- */
+.components-section {
+    padding: 80px var(--spacing-unit);
+    background-color: var(--background-dark); /* Fondo oscuro para contraste */
+    color: var(--text-light);
+    text-align: center;
+}
+
+.components-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.components-content h3 {
+    font-size: 2.8em;
+    color: var(--accent-color); /* Título en amarillo */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.components-content p {
+    font-size: 1.1em;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.component-list {
+    list-style: none;
+    padding: 0;
+    display: grid; /* Usa Grid para organizar los componentes */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.component-list li {
+    background: var(--secondary-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Espacio entre items en lista original */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    transition: transform 0.2s ease-in-out;
+}
+
+.component-list li:hover {
+    transform: translateY(-5px);
+    background-color: #4A6278; /* Un poco más claro al pasar el ratón */
+}
+
+.component-list li i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.3em;
+}
+
+
+/* --- Pie de Página --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--background-dark);
+    color: var(--text-light);
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Media Queries (Diseño Responsivo) --- */
+@media (max-width: 992px) {
+    .hero-section, .product-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .product-image-container {
+        padding-right: 0;
+        margin-bottom: var(--spacing-unit);
+        max-width: 70%;
+    }
+
+    .product-info {
+        padding-left: 0;
+    }
+
+    .product-info h2 {
+        font-size: 2em;
+    }
+
+    .price {
+        font-size: 3em;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+    
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        justify-content: center;
+    }
+    .navbar ul li {
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 80px var(--spacing-unit);
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .product-card {
+        padding: var(--spacing-unit);
+    }
+
+    .price-and-action {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .component-list {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+}
